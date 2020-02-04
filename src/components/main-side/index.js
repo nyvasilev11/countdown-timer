@@ -1,13 +1,13 @@
 import React from "react";
-import EventName from "./EventNameDisplay";
+import EventNameCenter from "./EventNameDisplay";
 import TimeAndDate from "./TimeAndDate";
 
 const MainSide = () => {
   return (
-    <div>
-      <EventName />
-      <TimeAndDate />
-    </div>
+    <section className="mainSide">
+      <EventNameCenter className="mainSide__event-name" />
+      <TimeAndDate className="mainSide__time-date" />
+    </section>
   );
 };
 

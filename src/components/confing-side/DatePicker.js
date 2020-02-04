@@ -13,8 +13,10 @@ const DatePickerC = () => {
   };
 
   return (
-    <div>
+    <div className="leftSide__config leftSide__config--date">
+      <p className="leftSide__sub-title">Countdown to date:</p>
       <DatePicker
+        className="leftSide__input"
         dateFormat="dd/MM/yyyy"
         selected={showDate}
         onChange={handleDispatchDate}
