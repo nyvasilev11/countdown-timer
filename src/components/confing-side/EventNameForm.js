@@ -11,8 +11,10 @@ const EventName = () => {
     dispatchName(getEventName(name));
   };
   return (
-    <div>
+    <div className="leftSide__config leftSide__config--name">
+      <p className="leftSide__sub-title">Countdown title</p>
       <input
+        className="leftSide__input"
         ref={inputRef}
         type="text"
         onChange={handleEventName}

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 const TimeAndDate = () => {
   let timeProp = useSelector(state => state.clock);
@@ -37,28 +37,28 @@ const TimeAndDate = () => {
   });
 
   return (
-    <div>
+    <div className="mainSide__clock">
       <span>
         {datePropLocal.day}
-        {datePropLocal.day > 1 || datePropLocal.day < -1 ? ' days ' : ' day '}
+        {datePropLocal.day > 1 || datePropLocal.day < -1 ? " days " : " day "}
       </span>
       <span>
         {timePropLocal.hour}
         {timePropLocal.hour > 1 || timePropLocal.hour < -1
-          ? ' hours '
-          : ' hour '}
+          ? " hours "
+          : " hour "}
       </span>
       <span>
         {timePropLocal.minute}
         {timePropLocal.minute > 1 || timePropLocal.minute < -1
-          ? ' minutes '
-          : ' minute '}
+          ? " minutes "
+          : " minute "}
       </span>
       <span>
         {timePropLocal.second}
         {timePropLocal.second > 1 || timePropLocal.second < -1
-          ? ' seconds '
-          : ' second '}
+          ? " seconds "
+          : " second "}
       </span>
       <p>{new Date(dateProp).toDateString()}</p>
     </div>

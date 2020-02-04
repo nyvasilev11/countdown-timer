@@ -4,10 +4,10 @@ import MainSide from "./components/main-side";
 
 function App() {
   return (
-    <div id="app">
+    <main id="app">
       <LeftSide />
       <MainSide />
-    </div>
+    </main>
   );
 }
 

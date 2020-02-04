@@ -5,14 +5,11 @@ import EventName from "./EventNameForm";
 
 const LeftSide = () => {
   return (
-    <div>
-      <p>Countdown title</p>
+    <section className="leftSide">
       <EventName />
-      <p>Countdown to date:</p>
       <DatePicker />
-      <p>Event time:</p>
       <TimePicker />
-    </div>
+    </section>
   );
 };
 
