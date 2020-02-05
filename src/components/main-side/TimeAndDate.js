@@ -38,29 +38,37 @@ const TimeAndDate = () => {
 
   return (
     <div className="mainSide__clock">
-      <span>
+      <div>
         {datePropLocal.day}
-        {datePropLocal.day > 1 || datePropLocal.day < -1 ? " days " : " day "}
-      </span>
-      <span>
+        <p>
+          {datePropLocal.day > 1 || datePropLocal.day < -1 ? " days " : " day "}
+        </p>
+      </div>
+      <div>
         {timePropLocal.hour}
-        {timePropLocal.hour > 1 || timePropLocal.hour < -1
-          ? " hours "
-          : " hour "}
-      </span>
-      <span>
+        <p>
+          {timePropLocal.hour > 1 || timePropLocal.hour < -1
+            ? " hours "
+            : " hour "}
+        </p>
+      </div>
+      <div>
         {timePropLocal.minute}
-        {timePropLocal.minute > 1 || timePropLocal.minute < -1
-          ? " minutes "
-          : " minute "}
-      </span>
-      <span>
+        <p>
+          {timePropLocal.minute > 1 || timePropLocal.minute < -1
+            ? " minutes "
+            : " minute "}
+        </p>
+      </div>
+      <div>
         {timePropLocal.second}
-        {timePropLocal.second > 1 || timePropLocal.second < -1
-          ? " seconds "
-          : " second "}
-      </span>
-      <p>{new Date(dateProp).toDateString()}</p>
+        <p>
+          {timePropLocal.second > 1 || timePropLocal.second < -1
+            ? " seconds "
+            : " second "}
+        </p>
+      </div>
+      <p class="mainSide__timeAndDate">{new Date(dateProp).toDateString()}</p>
     </div>
   );
 };
