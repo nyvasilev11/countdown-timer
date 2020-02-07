@@ -37,7 +37,7 @@ const TimeAndDate = () => {
   });
 
   return (
-    <div className="mainSide__clock">
+    <div className="main-side__clock">
       <div>
         {datePropLocal.day}
         <p>
@@ -68,7 +68,9 @@ const TimeAndDate = () => {
             : " second "}
         </p>
       </div>
-      <p class="mainSide__timeAndDate">{new Date(dateProp).toDateString()}</p>
+      <p className="main-side__timeAndDate">
+        {new Date(dateProp).toDateString()}
+      </p>
     </div>
   );
 };

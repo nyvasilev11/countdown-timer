@@ -18,3 +18,17 @@ export const getEventName = name => {
     payload: name
   };
 };
+
+export const getBgColor = color => {
+  return {
+    type: "bgColor",
+    payload: color
+  };
+};
+
+export const getTextColor = color => {
+  return {
+    type: "textColor",
+    payload: color
+  };
+};

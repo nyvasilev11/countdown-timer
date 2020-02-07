@@ -4,9 +4,9 @@ import TimeAndDate from "./TimeAndDate";
 
 const MainSide = () => {
   return (
-    <section className="mainSide">
-      <EventNameCenter className="mainSide__event-name" />
-      <TimeAndDate className="mainSide__time-date" />
+    <section className="main-side">
+      <EventNameCenter className="main-side__event-name" />
+      <TimeAndDate className="main-side__time-date" />
     </section>
   );
 };

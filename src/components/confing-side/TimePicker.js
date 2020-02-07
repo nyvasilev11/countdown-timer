@@ -13,10 +13,10 @@ const TimePicker = () => {
   };
 
   return (
-    <div className="leftSide__config leftSide__config--time">
-      <p className="leftSide__sub-title">Event time:</p>
+    <div className="config-side__config config-side__config--time">
+      <p className="config-side__sub-title">Event time:</p>
       <DatePicker
-        className="leftSide__input"
+        className="config-side__input"
         selected={showTime}
         onChange={handleDispatchTime}
         showTimeSelect

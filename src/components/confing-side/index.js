@@ -5,7 +5,7 @@ import EventName from "./EventNameForm";
 
 const LeftSide = () => {
   return (
-    <section className="leftSide">
+    <section className="config-side">
       <EventName />
       <DatePicker />
       <TimePicker />

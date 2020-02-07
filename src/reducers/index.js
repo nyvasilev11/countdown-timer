@@ -1,12 +1,38 @@
-import GetDateReducer from "./GetDateReducer";
-import GetTimeReducer from "./GetTimeReducer";
-import EventNameReducer from "./EvetNameReducer";
-import { combineReducers } from "redux";
+const defaultState = {
+  date: Date.parse(new Date()),
+  clock: new Date(),
+  eventName: "Event Name",
+  bgColor: "",
+  textColor: ""
+};
 
-const allReducers = combineReducers({
-  date: GetDateReducer,
-  clock: GetTimeReducer,
-  eventName: EventNameReducer
-});
-
-export default allReducers;
+export default function(state = defaultState, { type, payload }) {
+  switch (type) {
+    case "calendar":
+      return {
+        ...state,
+        date: Date.parse(payload)
+      };
+    case "clock":
+      return {
+        ...state,
+        clock: payload.getTime()
+      };
+    case "name":
+      return {
+        ...state,
+        eventName: payload
+      };
+    case "bgColor":
+      return {
+        ...state,
+        bgColor: payload.hex
+      };
+    case "textColor":
+      return {
+        ...state,
+        textColor: payload.hex
+      };
+  }
+  return state;
+}
