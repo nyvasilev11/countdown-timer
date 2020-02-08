@@ -14,7 +14,7 @@ const TimePicker = () => {
 
   return (
     <div className="config-side__config config-side__config--time">
-      <p className="config-side__sub-title">Event time:</p>
+      <p className="sub-title">Event time:</p>
       <DatePicker
         className="config-side__input"
         selected={showTime}

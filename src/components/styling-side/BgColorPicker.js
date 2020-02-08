@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { SketchPicker } from "react-color";
 import { useSelector, useDispatch } from "react-redux";
 import { getBgColor } from "../../actions";
-import { styles } from "../../styles/styled-component";
+import { Swatch, Color, Popover, Cover } from "../../styles/styled-component";
 
 const BgColorPicker = () => {
   const [colorPanel, setColorPanel] = useState(false);
@@ -19,17 +19,17 @@ const BgColorPicker = () => {
   const bgColor = useSelector(state => state.bgColor);
   return (
     <div>
-      <div style={styles.swatch} onClick={handleClick}>
-        <div style={styles.color} />
-      </div>
+      <Swatch onClick={handleClick}>
+        <Color background={bgColor} />
+      </Swatch>
       {colorPanel ? (
-        <div style={styles.popover}>
-          <div style={styles.cover} onClick={handleClose} />
+        <Popover>
+          <Cover onClick={handleClose} />
           <SketchPicker
             color={bgColor}
             onChange={color => dispatchBg(getBgColor(color))}
           />
-        </div>
+        </Popover>
       ) : null}
     </div>
   );

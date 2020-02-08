@@ -44,7 +44,7 @@ const TimeAndDate = () => {
           {datePropLocal.day > 1 || datePropLocal.day < -1 ? " days " : " day "}
         </p>
       </div>
-      <div>
+      <div className="main-side__clock--border">
         {timePropLocal.hour}
         <p>
           {timePropLocal.hour > 1 || timePropLocal.hour < -1
@@ -52,7 +52,7 @@ const TimeAndDate = () => {
             : " hour "}
         </p>
       </div>
-      <div>
+      <div className="main-side__clock--border">
         {timePropLocal.minute}
         <p>
           {timePropLocal.minute > 1 || timePropLocal.minute < -1

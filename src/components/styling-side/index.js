@@ -1,21 +1,21 @@
 import React from "react";
 import BgColorPicker from "./BgColorPicker";
 import TextColorPicker from "./TextColorPicker";
-import { useSelector } from "react-redux";
-import defaultStyled from "../../styles/styled-component";
 
 const RightSide = () => {
-  const textColorr = useSelector(state => state.textColor);
-  const bgColorr = useSelector(state => state.bgColor);
-
   return (
     <section className="styling-side">
-      <BgColorPicker />
-      <TextColorPicker />
-      <defaultStyled.test textC={textColorr} bgC={bgColorr}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
-        architecto.
-      </defaultStyled.test>
+      <div className="color-panel">
+        <p className="sub-title">Colors</p>
+        <div className="color-panel--left">
+          <BgColorPicker />
+          <p className="color-panel__title--left">Background Color</p>
+        </div>
+        <div className="color-panel--right">
+          <TextColorPicker />
+          <p className="color-panel__title--right">Text Color</p>
+        </div>
+      </div>
     </section>
   );
 };

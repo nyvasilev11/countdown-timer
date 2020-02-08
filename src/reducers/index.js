@@ -33,6 +33,8 @@ export default function(state = defaultState, { type, payload }) {
         ...state,
         textColor: payload.hex
       };
+    default:
+      console.log(state);
   }
   return state;
 }

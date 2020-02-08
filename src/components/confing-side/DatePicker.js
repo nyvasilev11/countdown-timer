@@ -14,7 +14,7 @@ const DatePickerC = () => {
 
   return (
     <div className="config-side__config config-side__config--date">
-      <p className="config-side__sub-title">Countdown to date:</p>
+      <p className="sub-title">Countdown to date:</p>
       <DatePicker
         className="config-side__input"
         dateFormat="dd/MM/yyyy"

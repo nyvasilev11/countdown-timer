@@ -12,7 +12,7 @@ const EventName = () => {
   };
   return (
     <div className="config-side__config config-side__config--name">
-      <p className="config-side__sub-title">Countdown title</p>
+      <p className="sub-title">Countdown title</p>
       <input
         className="config-side__input"
         ref={inputRef}

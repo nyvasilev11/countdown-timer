@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { SketchPicker } from "react-color";
 import { useSelector, useDispatch } from "react-redux";
 import { getTextColor } from "../../actions";
-import { styles } from "../../styles/styled-component";
+import { Swatch, Color, Popover, Cover } from "../../styles/styled-component";
 
 const TextColorPicker = () => {
   const [colorPanel, setColorPanel] = useState(false);
@@ -19,17 +19,17 @@ const TextColorPicker = () => {
   const textColor = useSelector(state => state.textColor);
   return (
     <div>
-      <div style={styles.swatch} onClick={handleClick}>
-        <div style={styles.color} />
-      </div>
+      <Swatch onClick={handleClick}>
+        <Color background={textColor} />
+      </Swatch>
       {colorPanel ? (
-        <div style={styles.popover}>
-          <div style={styles.cover} onClick={handleClose} />
+        <Popover>
+          <Cover onClick={handleClose} />
           <SketchPicker
             color={textColor}
             onChange={color => dispatchText(getTextColor(color))}
           />
-        </div>
+        </Popover>
       ) : null}
     </div>
   );
