@@ -1,6 +1,7 @@
 import React from "react";
 import BgColorPicker from "./BgColorPicker";
 import TextColorPicker from "./TextColorPicker";
+import SizeSlider from "./SizeSlider";
 
 const RightSide = () => {
   return (
@@ -16,6 +17,7 @@ const RightSide = () => {
           <p className="color-panel__title--right">Text Color</p>
         </div>
       </div>
+      <SizeSlider />
     </section>
   );
 };

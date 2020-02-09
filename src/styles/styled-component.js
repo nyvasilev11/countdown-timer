@@ -14,7 +14,7 @@ export const Color = styled.div`
   width: 6rem;
   height: 6rem;
   border-radius: 0.2rem;
-  background-color: ${props => (props.background ? props.background : "#f00")};
+  background-color: ${props => (props.background ? props.background : "#f95")};
 `;
 
 export const Popover = styled.div`
@@ -30,8 +30,14 @@ export const Cover = styled.div`
   left: 0;
 `;
 
-export const MainSideDiv = styled.div`
+export const MainSideSection = styled.section`
   background-color: ${props => (props.background ? props.background : "#0af")};
   color: ${props => (props.tColor ? props.tColor : "#f1f1f1")};
-  /* color: #f1f1f1; */
+  border-radius: ${props => (props.radius ? `${props.radius}rem` : "0")};
+  width: ${props => (props.width ? props.width : "50")}rem;
+  height: ${props => (props.height ? props.height : "15")}rem;
+`;
+
+export const Slider = styled.input`
+  border: 1px solid red;
 `;

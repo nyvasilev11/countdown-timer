@@ -3,7 +3,10 @@ const defaultState = {
   clock: new Date(),
   eventName: "Event Name",
   bgColor: "",
-  textColor: ""
+  textColor: "",
+  sizeWidth: null,
+  sizeHeight: null,
+  borderRadius: 0
 };
 
 export default function(state = defaultState, { type, payload }) {
@@ -32,6 +35,17 @@ export default function(state = defaultState, { type, payload }) {
       return {
         ...state,
         textColor: payload.hex
+      };
+    case "size":
+      return {
+        ...state,
+        sizeWidth: payload * 0.5,
+        sizeHeight: payload * 0.2
+      };
+    case "radius":
+      return {
+        ...state,
+        borderRadius: payload
       };
     default:
       console.log(state);

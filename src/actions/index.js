@@ -32,3 +32,17 @@ export const getTextColor = color => {
     payload: color
   };
 };
+
+export const getSize = sizeValue => {
+  return {
+    type: "size",
+    payload: sizeValue
+  };
+};
+
+export const getBorderRadius = radius => {
+  return {
+    type: "radius",
+    payload: radius
+  };
+};
