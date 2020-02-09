@@ -15,7 +15,7 @@ A simple countdown timer. You have to choose date and time and will start counti
 3. Run `npm start`
 4. Go to `http://localhost:3000` to view the app
 
-## How is works
+## How it works
 
 ### Left side
 
