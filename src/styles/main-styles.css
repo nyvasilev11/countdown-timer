@@ -1,6 +1,7 @@
 body,
 html {
   font-size: 10px;
+  background-color: #ffeccb;
 }
 
 /* global */
@@ -34,18 +35,25 @@ html {
 /* left side */
 .config-side {
   padding: 0 1rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 2rem;
 }
 
 .config-side__input {
-  border: 0.15rem solid #999;
+  border: 0.1rem solid #6194ea;
   border-radius: 0.5rem;
   padding: 0.5rem;
   font: 1.5rem "Lato";
   height: 2rem;
+  margin-bottom: 1rem;
+  background-color: #d6f4ff;
 }
 
 .config-side__input:focus {
-  border: 1px solid #333;
+  border: 0.1rem solid #6194ea;
 }
 
 .sub-title {
@@ -106,15 +114,22 @@ html {
 
 /* right side */
 .color-panel {
-  display: grid;
   padding: 0 1rem;
+}
+
+.color-panel__blocks {
+  display: flex;
+  justify-content: space-around;
 }
 
 .color-panel--left,
 .color-panel--right {
-  grid-row: 2/2;
   display: flex;
   flex-direction: column;
+}
+
+.color-panel__title {
+  margin-top: 0.5rem;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -124,5 +139,6 @@ html {
   .config-side,
   .styling-side {
     flex: 0 0 100%;
+    flex-direction: row;
   }
 }

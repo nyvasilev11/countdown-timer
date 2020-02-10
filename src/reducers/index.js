@@ -2,8 +2,8 @@ const defaultState = {
   date: Date.parse(new Date()),
   clock: new Date(),
   eventName: "Event Name",
-  bgColor: "",
-  textColor: "",
+  bgColor: "#0af",
+  textColor: "#f1f1f1",
   sizeWidth: null,
   sizeHeight: null,
   borderRadius: 0
