@@ -2,6 +2,7 @@ import React from "react";
 import BgColorPicker from "./BgColorPicker";
 import TextColorPicker from "./TextColorPicker";
 import SizeSlider from "./SizeSlider";
+import CheckBoxOption from "./CheckBoxOptions";
 
 const RightSide = () => {
   return (
@@ -24,6 +25,11 @@ const RightSide = () => {
         </div>
       </div>
       <SizeSlider />
+      <div className="checkboxes">
+        <CheckBoxOption id={"transparency"} label={"Transparent background"} />
+        <CheckBoxOption id={"hide_date_title"} label={"Hide date and title"} />
+        {/* <CheckBoxOption id={"show_millisec"} label={"Show 10ths of seconds"} /> */}
+      </div>
     </section>
   );
 };

@@ -1,7 +1,7 @@
 body,
 html {
   font-size: 10px;
-  background-color: #ffeccb;
+  background-color: #f1f1f1;
 }
 
 /* global */
@@ -39,7 +39,7 @@ html {
   justify-content: space-around;
   flex-wrap: wrap;
   flex-direction: column;
-  margin-top: 2rem;
+  flex: 0 0 10%;
 }
 
 .config-side__input {
@@ -47,8 +47,7 @@ html {
   border-radius: 0.5rem;
   padding: 0.5rem;
   font: 1.5rem "Lato";
-  height: 2rem;
-  margin-bottom: 1rem;
+  height: 3rem;
   background-color: #d6f4ff;
 }
 
@@ -113,6 +112,11 @@ html {
 }
 
 /* right side */
+
+.styling-side {
+  flex: 0 0 15%;
+}
+
 .color-panel {
   padding: 0 1rem;
 }
@@ -132,6 +136,11 @@ html {
   margin-top: 0.5rem;
 }
 
+.checkboxes__element {
+  margin: 0.5rem 0;
+}
+
+/* media query */
 @media only screen and (max-width: 1000px) {
   .main-side {
     order: -1;

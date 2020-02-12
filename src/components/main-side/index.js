@@ -10,16 +10,19 @@ const MainSide = () => {
   const borderRadius = useSelector(state => state.borderRadius);
   const width = useSelector(state => state.sizeWidth);
   const height = useSelector(state => state.sizeHeight);
+  const checkBox = useSelector(state => state.checkBoxChecked);
 
   return (
     <MainSideSection
-      background={background}
+      background={checkBox === "transparency" ? "transperant" : background}
       tColor={text}
       radius={borderRadius}
       width={width}
       height={height}
       className="main-side">
-      <EventNameCenter className="main-side__event-name" />
+      {checkBox === "hide_date_title" ? null : (
+        <EventNameCenter className="main-side__event-name" />
+      )}
       <TimeAndDate className="main-side__time-date" />
     </MainSideSection>
   );

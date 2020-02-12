@@ -8,6 +8,8 @@ const TimeAndDate = () => {
   const [timePropLocal, setTimeProp] = useState({});
   const [datePropLocal, setDateProp] = useState({});
 
+  const checkBox = useSelector(state => state.checkBoxChecked);
+
   useEffect(() => {
     const renderDateTimeLeft = setInterval(() => {
       let now = new Date();
@@ -21,6 +23,7 @@ const TimeAndDate = () => {
       );
       let minutes = Math.floor((distanceTime % (1000 * 60 * 60)) / (1000 * 60));
       let seconds = Math.floor((distanceTime % (1000 * 60)) / 1000);
+      // let mili = Math.floor((distanceTime % 100) * 100);
 
       setTimeProp({
         ...timePropLocal,
@@ -30,7 +33,7 @@ const TimeAndDate = () => {
       });
 
       setDateProp({ day: days + 1 });
-    }, 1000);
+    }, 100);
     return () => {
       clearInterval(renderDateTimeLeft);
     };
@@ -68,9 +71,12 @@ const TimeAndDate = () => {
             : " second "}
         </p>
       </div>
-      <p className="main-side__timeAndDate">
-        {new Date(dateProp).toDateString()}
-      </p>
+
+      {checkBox === "hide_date_title" ? null : (
+        <p className="main-side__timeAndDate">
+          {new Date(dateProp).toDateString()}
+        </p>
+      )}
     </div>
   );
 };

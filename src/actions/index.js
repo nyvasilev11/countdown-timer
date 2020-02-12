@@ -46,3 +46,10 @@ export const getBorderRadius = radius => {
     payload: radius
   };
 };
+
+export const isCheckboxCheked = isCheck => {
+  return {
+    type: "checkBox",
+    payload: isCheck
+  };
+};

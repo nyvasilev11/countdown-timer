@@ -1,12 +1,19 @@
+const date = new Date();
+date.setDate(date.getDate() + 29);
+
+const time = new Date();
+time.setTime(time.getTime() + 1000 * (1000 * 1000));
+
 const defaultState = {
-  date: Date.parse(new Date()),
-  clock: new Date(),
+  date: date,
+  clock: time,
   eventName: "Event Name",
   bgColor: "#0af",
   textColor: "#f1f1f1",
   sizeWidth: null,
   sizeHeight: null,
-  borderRadius: 0
+  borderRadius: 0,
+  checkBoxChecked: ""
 };
 
 export default function(state = defaultState, { type, payload }) {
@@ -14,12 +21,12 @@ export default function(state = defaultState, { type, payload }) {
     case "calendar":
       return {
         ...state,
-        date: Date.parse(payload)
+        date: payload
       };
     case "clock":
       return {
         ...state,
-        clock: payload.getTime()
+        clock: payload
       };
     case "name":
       return {
@@ -46,6 +53,11 @@ export default function(state = defaultState, { type, payload }) {
       return {
         ...state,
         borderRadius: payload
+      };
+    case "checkBox":
+      return {
+        ...state,
+        checkBoxChecked: payload
       };
     default:
       console.log(state);

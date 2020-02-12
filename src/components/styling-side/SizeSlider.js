@@ -20,7 +20,7 @@ const SizeSlider = () => {
         onChange={e => dispatchSize(getSize(e.target.value))}
       />
       <p>
-        Width:{" "}
+        Width:
         {widthSize > 0 && widthSize !== undefined && widthSize !== null
           ? `${parseFloat(widthSize).toFixed(0)}0px`
           : null}
