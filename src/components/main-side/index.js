@@ -5,22 +5,25 @@ import { MainSideSection } from "../../styles/styled-component";
 import { useSelector } from "react-redux";
 
 const MainSide = () => {
-  const background = useSelector(state => state.bgColor);
-  const text = useSelector(state => state.textColor);
+  const backgroundColor = useSelector(state => state.bgColor);
+  const textColor = useSelector(state => state.textColor);
   const borderRadius = useSelector(state => state.borderRadius);
-  const width = useSelector(state => state.sizeWidth);
-  const height = useSelector(state => state.sizeHeight);
-  const checkBox = useSelector(state => state.checkBoxChecked);
+  const widthSize = useSelector(state => state.sizeWidth);
+  const heightSize = useSelector(state => state.sizeHeight);
+  const bgTransperancy = useSelector(state => state.bgTransperancy);
+  const dateNameShow = useSelector(state => state.dateNameShowHide);
 
   return (
     <MainSideSection
-      background={checkBox === "transparency" ? "transperant" : background}
-      tColor={text}
+      background={
+        bgTransperancy === "transparency" ? "transperant" : backgroundColor
+      }
+      tColor={textColor}
       radius={borderRadius}
-      width={width}
-      height={height}
+      width={widthSize}
+      height={heightSize}
       className="main-side">
-      {checkBox === "hide_date_title" ? null : (
+      {dateNameShow === "hideDateTitle" ? null : (
         <EventNameCenter className="main-side__event-name" />
       )}
       <TimeAndDate className="main-side__time-date" />

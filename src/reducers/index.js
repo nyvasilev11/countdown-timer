@@ -13,7 +13,8 @@ const defaultState = {
   sizeWidth: null,
   sizeHeight: null,
   borderRadius: 0,
-  checkBoxChecked: ""
+  bgTransperancy: "",
+  dateNameShowHide: ""
 };
 
 export default function(state = defaultState, { type, payload }) {
@@ -54,10 +55,15 @@ export default function(state = defaultState, { type, payload }) {
         ...state,
         borderRadius: payload
       };
-    case "checkBox":
+    case "transperancyChecked":
       return {
         ...state,
-        checkBoxChecked: payload
+        bgTransperancy: payload
+      };
+    case "dateTimeChecked":
+      return {
+        ...state,
+        dateNameShowHide: payload
       };
     default:
       console.log(state);

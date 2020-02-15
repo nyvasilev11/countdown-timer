@@ -47,9 +47,16 @@ export const getBorderRadius = radius => {
   };
 };
 
-export const isCheckboxCheked = isCheck => {
+export const isTransperancyChecked = isChecked => {
   return {
-    type: "checkBox",
-    payload: isCheck
+    type: "transperancyChecked",
+    payload: isChecked
+  };
+};
+
+export const isHideDateTimeChecked = isChecked => {
+  return {
+    type: "dateTimeChecked",
+    payload: isChecked
   };
 };

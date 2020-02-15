@@ -27,8 +27,7 @@ const RightSide = () => {
       <SizeSlider />
       <div className="checkboxes">
         <CheckBoxOption id={"transparency"} label={"Transparent background"} />
-        <CheckBoxOption id={"hide_date_title"} label={"Hide date and title"} />
-        {/* <CheckBoxOption id={"show_millisec"} label={"Show 10ths of seconds"} /> */}
+        <CheckBoxOption id={"hideDateTitle"} label={"Hide date and title"} />
       </div>
     </section>
   );

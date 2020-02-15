@@ -1,7 +1,7 @@
 import React from "react";
 import { CheckBoxInput, CheckBoxLabel } from "../../styles/styled-component";
 import { useDispatch } from "react-redux";
-import { isCheckboxCheked } from "../../actions";
+import { isTransperancyChecked, isHideDateTimeChecked } from "../../actions";
 
 const CheckBoxOption = ({ id, label }) => {
   const checkedDispatch = useDispatch();
@@ -9,29 +9,19 @@ const CheckBoxOption = ({ id, label }) => {
   const handleChange = e => {
     const target = e.target;
 
-    const isChecked = element => {
-      if (element) {
-        if (element.checked) {
-          return checkedDispatch(isCheckboxCheked(element.id));
-        } else if (!element.checked) {
-          return checkedDispatch(isCheckboxCheked(`un${element.id}`));
-        }
-      }
+    const storePassedOptions = (element, passThisOption) => {
+      if (element.checked) checkedDispatch(passThisOption(element.id));
+      else if (!element.checked)
+        checkedDispatch(passThisOption(`un${element.id}`));
     };
 
     switch (target.id) {
       case "transparency":
-        isChecked(target);
-        break;
-      case "hide_date_title":
-        isChecked(target);
-        break;
-      // case "show_millisec":
-      //   isChecked(target);
-      //   break;
+        return storePassedOptions(target, isTransperancyChecked);
+      case "hideDateTitle":
+        return storePassedOptions(target, isHideDateTimeChecked);
       default:
-        console.log(target.id);
-        break;
+        console.log(`default: ${target.id}`);
     }
   };
 
